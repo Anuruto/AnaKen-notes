@@ -41,16 +41,27 @@
         <div class="card">
 
             <div class="card-body">
-                <h5 class="card-title">Add a note</h5>
+                <label for="addTitle" class="card-title">Add a title</label>
+                <div class="input-group flex-nowrap">
+                    <!-- <span class="input-group-text" id="addon-wrapping">@</span> -->
+                    <input type="text" id="addTitle" class="form-control" placeholder="Add a Title"
+                        aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <label for="addTxt" class="card-title">Add a note</label>
                 <div class="mb-3">
-                    <textarea id="addTxt" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea id="addTxt" placeholder="Enter Body" class="form-control" id="exampleFormControlTextarea1"
+                        rows="3"></textarea>
                 </div>
                 <button id="addBtn" class="btn btn-primary">Add NOTE</button>
             </div>
         </div>
-        <hr>
-        <h3>Your Notes</h3> <button onclick="clearAll()" class="btn btn-outline-danger">Clear All</button>
-        <hr>
+
+        <div class="flex" style="display: flex;gap: 2em; ">
+
+            <hr>
+            <h3> <u> Your Notes</u></h3> <button onclick="clearAll()" class="btn btn-outline-danger">Clear All</button>
+            <hr>
+        </div>
         <div id="notes" class="row container-fluid">
 
             <div class="card mx-2 my-2" style="width: 18rem;">
