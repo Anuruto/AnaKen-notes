@@ -68,15 +68,27 @@ function deleteNote(index) {
 
 let search = document.getElementById("searchTxt");
 search.addEventListener("input", function () {
+
+  
   let inputVal = search.value.toLowerCase();
   // console.log('Input event fired!', inputVal);
   let noteCards = document.getElementsByClassName("noteCard");
+  // console.log(inputVal)
+// console.log(noteCards);
+
+
   Array.from(noteCards).forEach(function (element) {
+    // console.log(element);
     let cardTxt = element.getElementsByTagName("p")[0].innerText;
-    if (cardTxt.includes(inputVal)) {
+    let cardTitle = element.getElementsByTagName("h5")[0].innerText;
+    console.log(cardTitle);
+    console.log(cardTxt);
+    if (cardTxt.includes(inputVal) || cardTitle.includes(inputVal)) {
       element.style.display = "block";
+      console.log("here");
     } else {
       element.style.display = "none";
+      console.log("no");
     }
     // console.log(cardTxt);
   });
