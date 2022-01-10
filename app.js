@@ -1,4 +1,4 @@
-console.log("Welcome to notes app. This is app.js");
+// console.log("Welcome to notes app. This is app.js");
 showNotes();
 
 // If user adds a note, add it to the localStorage
@@ -81,14 +81,14 @@ search.addEventListener("input", function () {
     // console.log(element);
     let cardTxt = element.getElementsByTagName("p")[0].innerText;
     let cardTitle = element.getElementsByTagName("h5")[0].innerText;
-    console.log(cardTitle);
-    console.log(cardTxt);
+    // console.log(cardTitle);
+    // console.log(cardTxt);
     if (cardTxt.includes(inputVal) || cardTitle.includes(inputVal)) {
       element.style.display = "block";
-      console.log("here");
+      // console.log("here");
     } else {
       element.style.display = "none";
-      console.log("no");
+      // console.log("no");
     }
     // console.log(cardTxt);
   });
